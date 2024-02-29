@@ -1,5 +1,4 @@
-# SQLServer
-Curso de SQL
+# Curso de SQLServer
 SELECT:
 -------------------------------------------------------------------------
 
