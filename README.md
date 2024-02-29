@@ -36,7 +36,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-    -TIPOS DE DADOS
+# TIPOS DE DADOS
         1.Boleanos | 2.Caractere | 3.Números | 4.Temporais
 
             # 1.BOLEANOS #
