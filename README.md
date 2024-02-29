@@ -60,3 +60,17 @@ SELECT:
             -> DATETIME = armazena a data e horas no formato ano/mes/dia:hr:min:seg
             -> DATETIME2 = armazena a data e horas no formato ano/mes/dia:hr:min:seg:miliseg
             -> TIME = horas, minutos, segundos e milisegundos
+
+-------------------------------------------------------------------------
+
+# CHAVE PRIMÁRIA E ESTRANGEIRA
+
+    -CHAVE PRIMÁRIA
+        -> é basicamente uma coluna ou grupo de colunas, usada para identificar unicamente uma linha em uma tabela
+            CREATE TABLE Nome_Tabela (
+                nomeColuna TipodeDados PRIMARY KEY
+                nomeColuna TipodeDados .....
+
+    -CHAVE ESTRANGEIRA
+        -> é simplesmente uma coluna ou grupo de colunas que é uma chave primária em outra tabela, é chamada de tabbela pai
+            
