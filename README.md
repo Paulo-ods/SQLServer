@@ -1,7 +1,7 @@
 # Curso de SQLServer
 SELECT:
 -------------------------------------------------------------------------
-
+***SELECT***
 -SELECT *DISTINCT* coluna1                                             - retorna dados únicos e não duplicados 
 -FROM tabela
 
