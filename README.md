@@ -63,7 +63,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# CHAVE PRIMÁRIA E ESTRANGEIRA
+# CHAVE PRIMÁRIA E ESTRANGEIRA; CRIAÇÃO DE TABELAS
 
     -CHAVE PRIMÁRIA
         -> é basicamente uma coluna ou grupo de colunas, usada para identificar unicamente uma linha em uma tabela
@@ -73,4 +73,12 @@ SELECT:
 
     -CHAVE ESTRANGEIRA
         -> é simplesmente uma coluna ou grupo de colunas que é uma chave primária em outra tabela, é chamada de tabbela pai
+
+    -CRIAR TABELA                                                                PRINCIPAIS TIPOS DE RESTRIÇÕES
+        ->CREATE TABLE Nome_Tabela (                                             -NOT NULL= não permite nulos   
+                nomeColuna TipodeDados Restrição da Coluna,                      -UNIQUE= força q todos os valores em uma coluna tem que ser diferentes  
+                nomeColuna2 TipodeDados, .....                                   -PRIMARY KEY= uma junção de NOT NULL e UNIQUE 
+                nomeColuna3 TipodeDados, .....                                   -FOREIGN KEY= identifica únicamente uma linha em outra tabela
+                nomeColuna4 TipodeDados, PRIMARY KEY                             -CHECK= só quero valores acima de tantos seja inseridos em uma coluna, aplica restrições específicas
+                ....                                                             -DEFAULT= força um valor padrão quando nenhum valor é passado   
             
