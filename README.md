@@ -85,7 +85,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# INSERT INTO | UPDATE | DELETE | ALTER TABLE
+# INSERT INTO | UPDATE | DELETE | ALTER TABLE | DROP TABLE
     
      - # INSERT INTO tabela(coluna1, coluna2) #                            
      VALUES (valor1, valor2)
@@ -124,7 +124,28 @@ SELECT:
                 -> Altera o nome da tabela ao invés de ser da coluna
                 só colocar o nome atual e depois o novo nome
 
-        1.3 ALTER TABLE tabela
+        1.4 ALTER TABLE tabela
             ALTER COLUMN coluna TipoDeDados
                 -> Altera alguma categoria de Tipod de dados, como ex antes varchar(200) e executa o comando pra varchar(300)
+                
+    - # DROP TABLE nomeTabela #
+    
+        -> é usado para excluir uma tabela do banco de dados
+        -> só consguimos dropar quando a tabela não é referencida por outra 
+
+    - # TRUNCATE TABLE nomeTabela #
+        -> serve para apagar tudo que esta dentro da tabela 
+        -> vai apagar todos os dados de todas as linhas mas deixando as colunas da tabela
+
+    - # CREATE TABLE CarteiraMotorista (                                -> serve para criar restrições de valores
+	ID			INT				NOT NULL,                               que vão ser inseridos numa tabela no tipo 
+	Nome		VARCHAR(250)	NOT NULL,                               de dados quando você esta criando uma.
+	Idade		INT CHECK	(Idade >= 18)
+)#
+
+    - # CREATE VIEW nomeTabelaNova AS                                    -> serve para criar uma nova tabela tipo relatório,
+        SELECT Coluna1, Coluna2, Coluna3                                 que pega algumas colunas de acordo com a condição proposta   
+        FROM ColunaOriginal                                              -> onde coluna cidade for = fco beltrao pega os dados da   
+        WHERE coluna = ''#                                               coluna1, coluna2, coluna 3 e cria uma nova tabela 
         
+
