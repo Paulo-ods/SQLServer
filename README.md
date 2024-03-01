@@ -85,15 +85,46 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# INSERT INTO 
+# INSERT INTO | UPDATE | DELETE | ALTER TABLE
     
-    -INSERT INTO tabela(coluna1, coluna2)                             
+     - # INSERT INTO tabela(coluna1, coluna2) #                            
      VALUES (valor1, valor2)
 
-        -> os valosres entre parenteses vão preencher os dados da primeira linha da coluna selecionada
-        -> é usado quando você ja tem uma tabela e quer inserir dados nela
+            -> os valosres entre parenteses vão preencher os dados da primeira linha da coluna selecionada
+            -> é usado quando você ja tem uma tabela e quer inserir dados nela
 
-    - SELECT INTO tabelaNova FROM tabelaOriginal
+    - # SELECT INTO tabelaNova FROM tabelaOriginal #
 
-        -> serve para criar uma tabela rapidamente com os mesmos dados da original
-        mesma estrutura e os mesmos dados das linhas 
+            -> serve para criar uma tabela rapidamente com os mesmos dados da original
+            mesma estrutura e os mesmos dados das linhas 
+
+    - # UPDATE nomeTabela
+        SET coluna1 = valor1
+          coluna2 = valor2
+        WHERE id = 2 #
+      
+            -> serve para atualizar linhas de dados aonde você ja inseriu dados mas quer atualizar
+            -> para não alterar a coluna inteira temos que colocar uma condição para pegar somente a linha desejada
+
+    - # DELETE FROM nomeTabela
+        WHERE 
+        
+            -> serve para apagar linhas do banco de dados
+            -> sempre colocar WHERE para que não apague a tabela inteira
+
+    - # 1.1 ALTER TABLE nomeTabela
+            ADD colunaNova INT
+                -> para adicionar nova coluna em uma tabela
+            
+        1.2 EXEC sp_RENAME 'tabela.ColunaAtual', 'ColunaNova', 'COLUMN'
+                -> Altera o nome da coluna selecionada, primeiro o nome da tabela. coluna que quer alterar 
+                o nome, coloca o novo nome e por fim o tipo que é a coluna
+
+        1.3 EXEC sp_RENAME 'nomeTabelaAtual' 'nomeTabelaNova'
+                -> Altera o nome da tabela ao invés de ser da coluna
+                só colocar o nome atual e depois o novo nome
+
+        1.3 ALTER TABLE tabela
+            ALTER COLUMN coluna TipoDeDados
+                -> Altera alguma categoria de Tipod de dados, como ex antes varchar(200) e executa o comando pra varchar(300)
+        
