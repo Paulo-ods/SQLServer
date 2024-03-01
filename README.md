@@ -140,8 +140,8 @@ SELECT:
     - # CREATE TABLE CarteiraMotorista (                                -> serve para criar restrições de valores
 	ID			INT				NOT NULL,                               que vão ser inseridos numa tabela no tipo 
 	Nome		VARCHAR(250)	NOT NULL,                               de dados quando você esta criando uma.
-	Idade		INT CHECK	(Idade >= 18)
-)#
+	Idade		INT CHECK	(Idade >= 18))
+
 
     - # CREATE VIEW nomeTabelaNova AS                                    -> serve para criar uma nova tabela tipo relatório,
         SELECT Coluna1, Coluna2, Coluna3                                 que pega algumas colunas de acordo com a condição proposta   
