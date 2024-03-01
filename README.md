@@ -82,3 +82,18 @@ SELECT:
                 nomeColuna4 TipodeDados, PRIMARY KEY                             -CHECK= só quero valores acima de tantos seja inseridos em uma coluna, aplica restrições específicas
                 ....                                                             -DEFAULT= força um valor padrão quando nenhum valor é passado   
             
+
+-------------------------------------------------------------------------
+
+# INSERT INTO 
+    
+    -INSERT INTO tabela(coluna1, coluna2)                             
+     VALUES (valor1, valor2)
+
+        -> os valosres entre parenteses vão preencher os dados da primeira linha da coluna selecionada
+        -> é usado quando você ja tem uma tabela e quer inserir dados nela
+
+    - SELECT INTO tabelaNova FROM tabelaOriginal
+
+        -> serve para criar uma tabela rapidamente com os mesmos dados da original
+        mesma estrutura e os mesmos dados das linhas 
