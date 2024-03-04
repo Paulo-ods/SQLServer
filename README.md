@@ -41,12 +41,21 @@ SELECT:
      WHERE coluna *LIKE* '%to%'					  ou filtrar essa sílaba que existam no meio de algum dado
 
 
-      -SELECT TOP 10 *SUM*(coluna) AS 'Soma'				 -> quando quer somar todos os valores de uma coluna *SUM*
-       FROM tabela							 -> quando quer fazer a média total dos valores de uma coluna *AVG*
-       									 -> quando quer selecionar o *MIN* da coluna
-									 -> quando quer selecionar o *MAX* da coluna
+    -SELECT TOP 10 *SUM*(coluna) AS 'Soma'				 -> quando quer somar todos os valores de uma coluna *SUM*
+     FROM tabela							 -> quando quer fazer a média total dos valores de uma coluna *AVG*
+     SELECT *AVG*(coluna) AS 'Media'					 -> quando quer selecionar o *MIN* da coluna
+     FROM tabela							 -> quando quer selecionar o *MAX* da coluna
 
 
+    -SELECT coluna1, SUM(coluna2) AS 'nome'				 -> serve para agrupar resultados
+     FROM tabela							 -> nesse caso agrupou a soma da coluna 2 em uma nova coluna
+     GROUP BY coluna1							 com o nome que você colocar entre as aspas
+
+
+    -SELECT coluna1, SUM(coluna2) AS 'nome'				 -> é usado para filtrar resultados de um agrupamento
+     FROM tabela							 -> filtra dados já agrupados dependendo da condição 
+     GROUP BY coluna 1							 que você impor no HAVING	
+     *HAVING* COUNT(coluna1) > 10
 -------------------------------------------------------------------------
 
 # TIPOS DE DADOS
