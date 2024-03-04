@@ -7,7 +7,7 @@ SELECT:
     
     
     -SELECT *                                                              -> extrai alguns dados específicos da 
-    -FROM tabela                                                           coluna dependendo da condição proposta.
+     FROM tabela                                                           coluna dependendo da condição proposta.
      *WHERE* coluna = ''
 
 
@@ -20,19 +20,32 @@ SELECT:
 
 
     -SELECT coluna                                                         -> ordena a coluna selecionada na condição do
-    -FROM tabela                                                           WHERE em ordem crescente ou decrescente 
+     FROM tabela                                                           WHERE em ordem crescente ou decrescente 
      WHERE coluna = ''
      *ORDER BY* coluna *ASC/DESC*
 
 
     -SELECT *                                                              -> encontra o valor entre o mínimo e o máximo
-    -FROM tabela                                                           da coluna da tabela selecionada
-     WHERE coluna *between* MIN and MAX
+     FROM tabela                                                           da coluna da tabela selecionada
+     WHERE coluna *BETWEEN* MIN and MAX
 
 
     -SELECT *                                                             -> verifica se tem os valores selecionados dentro do ()  
-    -FROM                                                                 se existem dentro da coluna desejada    
-     WHERE coluna IN (2,3,4)
+     FROM                                                                 se existem dentro da coluna desejada    
+     WHERE coluna *IN* (2,3,4)
+
+
+    -SELECT *								  -> quando sao o começo de algum dado e não lembra o 
+     FROM tabela							  resto ou o começo ou o fim
+     WHERE coluna *LIKE* 'san%'					  -> tanto para filtrar os dados que tem 'san' no começo da palavra,
+     WHERE coluna *LIKE* '%to%'					  ou filtrar essa sílaba que existam no meio de algum dado
+
+
+      -SELECT TOP 10 *SUM*(coluna) AS 'Soma'				 -> quando quer somar todos os valores de uma coluna *SUM*
+       FROM tabela							 -> quando quer fazer a média total dos valores de uma coluna *AVG*
+       									 -> quando quer selecionar o *MIN* da coluna
+									 -> quando quer selecionar o *MAX* da coluna
+
 
 -------------------------------------------------------------------------
 
