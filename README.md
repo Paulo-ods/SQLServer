@@ -184,5 +184,9 @@ SELECT:
         SELECT Coluna1, Coluna2, Coluna3                                 que pega algumas colunas de acordo com a condição proposta   
         FROM ColunaOriginal                                              -> onde coluna cidade for = fco beltrao pega os dados da   
         WHERE coluna = ''#                                               coluna1, coluna2, coluna 3 e cria uma nova tabela 
-        
 
+
+
+    - # PROCEDURES # 							 -> conjunto de comandos que podem ser executados de uma só vez
+    									 -> se tem uma rotina pra verificar tal coisa fazer tal coisa e depois excluir tal coisa 
+									 podemos juntar todas essas ações em uma procedure só, sempre vai ser só um chamado
