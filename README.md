@@ -60,10 +60,17 @@ SELECT:
 
     -SELECT P.Coluna1, P.Coluna2, PE.Coluna3, PE.Coluna4		 -> junta as colunas de uma tabela para outra
      FROM tabela AS P							 -> tem que colocar apelido 'AS PE' para identificar as colunas
-     INNER JOIN tabela2 AS PE ON ColunaChave1 = ColunaChave2		 -> quando n especifíca as colunas junta todas colunas das 2 tabelas
-     FULL OUTER JOIN							 -> retorna todos os registros correspondentes das 2 tabelas selecionadas
+     *INNER JOIN* tabela2 AS PE ON ColunaChave1 = ColunaChave2		 -> quando n especifíca as colunas junta todas colunas das 2 tabelas
+     *FULL OUTER JOIN*							 -> retorna todos os registros correspondentes das 2 tabelas selecionadas
      									 quando são iguais, e quando não são retorna valor NULL
-     LEFT OUTER JOIN		  					 -> retorna todos os registros da tabela A correspondente disoníveis, se não retorna NULL
+     *LEFT OUTER JOIN*		  					 -> retorna todos os registros da tabela A correspondente disoníveis, se não retorna NULL
+
+
+    -SELECT coluna1, coluna2						 -> seelciona a mesma quantidade de coluna do mesmo tipo:string, int
+     FROM tabela1							 -> remove os dados duplicados
+     *UNION*
+     SELECT coluna1, coluna2
+     FROM tabela2
 -------------------------------------------------------------------------
 
 # TIPOS DE DADOS
