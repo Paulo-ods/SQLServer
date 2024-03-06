@@ -64,6 +64,7 @@ SELECT:
      *FULL OUTER JOIN*							 -> retorna todos os registros correspondentes das 2 tabelas selecionadas
      									 quando são iguais, e quando não são retorna valor NULL
      *LEFT OUTER JOIN*		  					 -> retorna todos os registros da tabela A correspondente disoníveis, se não retorna NULL
+     									 -> são todos os valores da segunda tabela + os valores comuns entre a primeira e a segunda através e primary key e foreign key
 
 
     -SELECT coluna1, coluna2						 -> seelciona a mesma quantidade de coluna do mesmo tipo:string, int
