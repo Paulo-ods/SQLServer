@@ -191,3 +191,24 @@ SELECT:
     - # PROCEDURES # 							 -> conjunto de comandos que podem ser executados de uma só vez
     									 -> se tem uma rotina pra verificar tal coisa fazer tal coisa e depois excluir tal coisa 
 									 podemos juntar todas essas ações em uma procedure só, sempre vai ser só um chamado
+
+
+CREATE TABLE dCursos (
+	ID_CURSO			NUMERIC(5, 0)		PRIMARY KEY,
+	NOME_CURSO			VARCHAR(200)		NOT NULL,
+	DATA_CADASTRO		DATE				NOT NULL,
+	LOGIN_CADASTRO		VARCHAR(15)			NOT NULL,
+	DATA_ALTERACAO		DATE				,
+	LOGIN_ALTERACAO		VARCHAR(15)			
+)
+
+SELECT * FROM dCursos 
+
+CREATE TABLE Alunos (
+	ID_Aluno				INT					PRIMARY KEY,
+	nome					VARCHAR(200)		NOT NULL,
+	data_nascimento			date,
+	sexo					VARCHAR(1),
+	data_cadastro			DATETIME,
+	login_cadastro			VARCHAR(15),
+)
