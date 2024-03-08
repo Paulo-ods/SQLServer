@@ -193,14 +193,15 @@ SELECT:
 									 podemos juntar todas essas ações em uma procedure só, sempre vai ser só um chamado
 
 
-CREATE TABLE Alunos (
-	ID_Aluno						INT					PRIMARY KEY,
-	nome							VARCHAR(200)		NOT NULL,
-	data_nascimento					date				NOT NULL,
-	sexo							VARCHAR(1)			NOT NULL,
-	data_cadastro					DATETIME			NOT NULL,
-	login_cadastro					VARCHAR(15)			NOT NULL
-)
+curso
+		CREATE TABLE Alunos (
+	ID_aluno						INT						PRIMARY KEY,
+	nome							VARCHAR(200)			NOT NULL,
+	data_nascimento					date					NOT NULL,
+	sexo							VARCHAR(1)				NOT NULL,
+	data_cadastro					DATETIME				NOT NULL,
+	login_cadastro					VARCHAR(15)				NOT NULL
+)	
 
 CREATE TABLE situacao (
 	ID_situacao						INT						PRIMARY KEY,
@@ -209,7 +210,7 @@ CREATE TABLE situacao (
 	login_cadastro					VARCHAR(15)				NOT NULL,
 )
 
-CREATE TABLE dCursos (
+CREATE TABLE Cursos (
 	ID_curso						INT						PRIMARY KEY,
 	nome_curso						VARCHAR(200)			NOT NULL,
 	data_cadastro					DATETIME				NOT NULL,
@@ -230,7 +231,7 @@ CREATE TABLE Turmas (
 	login_cadastro					VARCHAR(15)				
 )	
 
-CREATE TABLE Regitro_Presenca		(
+CREATE TABLE Registro_Presenca		(
 	ID_turma						INT						NOT NULL,
 	ID_aluno						INT						NOT NULL,
 	ID_siutacao						INT						NOT NULL,
@@ -238,3 +239,83 @@ CREATE TABLE Regitro_Presenca		(
 	data_cadastro					DATE					NOT NULL,
 	login_cadastro					VARCHAR(15)				NOT NULL
 )
+
+--Turmas X Alunos
+ALTER TABLE Turmas
+	ADD CONSTRAINT fk_turmaAlunos FOREIGN KEY (ID_aluno) REFERENCES Alunos (ID_aluno);
+
+--Turmas X Cursos
+ALTER TABLE Turmas
+	ADD CONSTRAINT fk_turmaCursos FOREIGN KEY (ID_curso) REFERENCES	Cursos (ID_curso);
+
+--Reg. Pres. X Turmas
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPTurmas FOREIGN KEY (ID_turma) REFERENCES Turmas (ID_turma);
+
+--Reg. Pres. X Alunos
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPAlunos FOREIGN KEY (ID_aluno) REFERENCES Turmas (ID_aluno);
+
+	CREATE TABLE Alunos (
+	ID_aluno						INT						PRIMARY KEY,
+	nome							VARCHAR(200)			NOT NULL,
+	data_nascimento					date					NOT NULL,
+	sexo							VARCHAR(1)				NOT NULL,
+	data_cadastro					DATETIME				NOT NULL,
+	login_cadastro					VARCHAR(15)				NOT NULL
+)	
+
+CREATE TABLE situacao (
+	ID_situacao						INT						PRIMARY KEY,
+	situacao						VARCHAR(25)				NOT NULL,
+	data_cadastro					DATETIME				NOT NULL, 
+	login_cadastro					VARCHAR(15)				NOT NULL,
+)
+
+CREATE TABLE Cursos (
+	ID_curso						INT						PRIMARY KEY,
+	nome_curso						VARCHAR(200)			NOT NULL,
+	data_cadastro					DATETIME				NOT NULL,
+	login_cadastro					VARCHAR(15)				NOT NULL,
+	data_alteracao					DATETIME				NULL,
+	login_alteracao					VARCHAR(15)				NULL
+)
+
+CREATE TABLE Turmas (
+	ID_turma						INT						PRIMARY KEY,
+	ID_aluno						INT						NOT NULL,
+	ID_curso						INT						NOT NULL,
+	valor_turma						NUMERIC(15,2)			NOT NULL,
+	desconto						NUMERIC(3,2)			NOT NULL,
+	data_inicio						DATE					NOT NULL,
+	data_termino					DATE					NULL,
+	data_cadastro					DATE					NOT NULL,
+	login_cadastro					VARCHAR(15)				
+)	
+
+CREATE TABLE Registro_Presenca		(
+	ID_turma						INT						NOT NULL,
+	ID_aluno						INT						NOT NULL,
+	ID_siutacao						INT						NOT NULL,
+	data_presenca					DATE					NOT NULL,
+	data_cadastro					DATE					NOT NULL,
+	login_cadastro					VARCHAR(15)				NOT NULL
+)
+
+--Turmas X Alunos
+ALTER TABLE Turmas
+	ADD CONSTRAINT fk_turmaAlunos FOREIGN KEY (ID_aluno) REFERENCES Alunos (ID_aluno);
+
+--Turmas X Cursos
+ALTER TABLE Turmas
+	ADD CONSTRAINT fk_turmaCursos FOREIGN KEY (ID_curso) REFERENCES	Cursos (ID_curso);
+
+--Reg. Pres. X Turmas
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPTurmas FOREIGN KEY (ID_turma) REFERENCES Turmas (ID_turma);
+
+--Reg. Pres. X Alunos
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPAlunos FOREIGN KEY (ID_aluno) REFERENCES Turmas (ID_aluno);
+
+	
