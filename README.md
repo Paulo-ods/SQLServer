@@ -123,7 +123,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# INSERT INTO | UPDATE | DELETE | ALTER TABLE | DROP TABLE
+# INSERT INTO | UPDATE | DELETE | ALTER TABLE | DROP TABLE | ISNULL
     
      - # INSERT INTO tabela(coluna1, coluna2) #                            
      VALUES (valor1, valor2)
@@ -191,6 +191,9 @@ SELECT:
     - # PROCEDURES # 							 -> conjunto de comandos que podem ser executados de uma só vez
     									 -> se tem uma rotina pra verificar tal coisa fazer tal coisa e depois excluir tal coisa 
 									 podemos juntar todas essas ações em uma procedure só, sempre vai ser só um chamado
+
+    - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
+	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
 
 
 curso
