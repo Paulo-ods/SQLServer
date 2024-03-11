@@ -123,7 +123,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# INSERT INTO | UPDATE | DELETE | ALTER TABLE | DROP TABLE | ISNULL
+# INSERT INTO | UPDATE | DELETE | ALTER TABLE | DROP TABLE | ISNULL | VIEW
     
      - # INSERT INTO tabela(coluna1, coluna2) #                            
      VALUES (valor1, valor2)
@@ -195,6 +195,18 @@ SELECT:
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
 	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
 
+
+    - # SELECT coluna1, coluna2						 -> a consulta pode ler os dados da tabela, mesmo que eles estejam sendo modificados por 
+	FROM tabela WITH(NOLOCK)					 outras transações no momento da execução da consulta
+	WHERE condição; #
+
+
+    - # VIEW #
+    	-> é uma possibilidade de armazenar resultado de uma query dentro de uma tabela virtual
+	-> não é possível adiocionar, excluir ou atualizar dados pois é somente uma vizualização
+ 	-> ganho de tempo, ao invés de criar sempre um select pra tal coisa, criamos uma view
+
+-------------------------------------------------------------------------
 
 curso
 		CREATE TABLE Alunos (
