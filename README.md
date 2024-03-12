@@ -191,14 +191,15 @@ SELECT:
     - # PROCEDURES # 							 -> conjunto de comandos que podem ser executados de uma só vez
     									 -> se tem uma rotina pra verificar tal coisa fazer tal coisa e depois excluir tal coisa 
 									 podemos juntar todas essas ações em uma procedure só, sempre vai ser só um chamado
-
-    - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
-	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
  
 
 -------------------------------------------------------------------------
 
 # | ISNULL | VIEW | HTTP |#
+
+    - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
+	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
+ 
 
     - # SELECT coluna1, coluna2						 -> a consulta pode ler os dados da tabela, mesmo que eles estejam sendo modificados por 
 	FROM tabela WITH(NOLOCK)					 outras transações no momento da execução da consulta
