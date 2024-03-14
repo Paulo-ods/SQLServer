@@ -195,7 +195,7 @@ SELECT:
 
 -------------------------------------------------------------------------
 
-# | ISNULL | VIEW | HTTP |#
+# | ISNULL | VIEW | HTTP | REPLACE #
 
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
 	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
@@ -217,6 +217,12 @@ SELECT:
      	-> POST: quando você quer salvar alguma informação no servidor, com esse metodo eu digo que quero grvar as info mandados no formulário
       	-> PUT: serve para alterar algum dado, adicionar, remover ou alterar
        	-> DELET: serve para remover informações
+
+
+    - # REPLACE #
+    	REPLACE(NomeColuna, 'campoQueExiste', 'campoQueVaiTrocar')
+     	-> Substitui o campo que quer e que ja existe na tabela por outro que queira substituir
+      	-> Supondo REPLACE(Nome, ' ', '%'); Tira todos os espaços em brancos na coluna Nome e substitui por %
 
 -------------------------------------------------------------------------
 
