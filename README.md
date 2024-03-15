@@ -195,6 +195,36 @@ SELECT:
 
 -------------------------------------------------------------------------
 
+# DEFINIÇÕES #
+
+       - Domain Controller - Servidor onde armazena todas as informações dos usuarios 
+       - Management Studio SSMS - Ferramenta client que conecta o servidor do SQÇ Server e permite a administração do DB
+       - Linked Server - possibilita a ligação entre dois servidores diferentes até mesmo remotos (baixa performace)
+       - Query - Solicitação de informações a um banco de dados (consulta)
+       - Procedures - São rotinas/processos que são definidos e podem ser chamados pelo seu nome
+       - Concatenar - Juntar dados (EX: nome + '(espaço)' + sobrenome) vai resultar em nome sobrenome
+       - Procedures - São procedimentos armazenados, onde são passados procedimentos a serem realizados diretamente no SQL 
+       - Cast/Convert - função usada para converter valores de uma variavel
+       - Output - ao declarar uam variavel e usarmos essa função, após o termino dos codigos digitados será retornado o valor desta variavel
+       - @@ROWCOUNT - função que retorna a quantidade de linhas que foram afetadas após um SELECT
+       - TRY Catch - função usada para informar o usuario em caso de erro , a função irá no TRY e a msg de erro no catch caso o try nao seja exec
+       - Trigger - são gatilhos programaveis que podem ser acionandos quando ocorre alguma determinada situação
+       - Check - função usada para realizar checagem (Ex: operação Insert ou Delete, so aceitará essas opções escolhidas)
+       - Inserted - tabela temporaria propia do sql onde fica os dados que acabaram de ser inseridos (permitindo o uso do ROLLBACK)
+       - Deleted - tabela temporaria propia do sql onde fica os dados que acabaram de ser deletados  (permitindo o uso do ROLLBACK)
+       - Functions - Reutilizar por exemplo calculos que vamos usar muitas vezes, ou uma consulta, para isso criamos uma função onde so vamos precisar chama-la 
+       - Check Constraint - Usado para criar restrições de valores de uma tabela (EX: idade >= 18) 
+       - Unique - Usado para criar valores unicos em uma tabela, esse valor nao pode ser repetido
+       - BEGIN TRAN .. COMMIT TRAN - tudo  que esta entre o begin e o commit será executado de uma unica vez evitando perder parcialmente as querys (os dados podem ser visualizados localmente)
+       - GETDATE() - função para coletar a data e hora atual
+       - LIKE - utilizado para buscar por uma determinada string dentro de um campo com valores textuais.
+       - @nomevariavel - variaveis locais
+       - @@nomevariavel - variaveis globais
+
+
+-------------------------------------------------------------------------
+
+
 # | ISNULL | VIEW | HTTP | REPLACE #
 
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
