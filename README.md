@@ -225,7 +225,7 @@ SELECT:
 -------------------------------------------------------------------------
 
 
-# | ISNULL | VIEW | HTTP | REPLACE #
+# | ISNULL | VIEW | HTTP | REPLACE| CASE | #
 
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
 	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
@@ -260,6 +260,17 @@ SELECT:
      	WHEN quando acontecer essa condição THEN entao sai esse resultado [ ...n ]		--> você pode ter quantos WHEN quiser e pode opcionalmente incluir uma cláusula ELSE 
    	 [ ELSE senao sai esse resultado ]							para especificar um valor padrão a ser retornado se nenhuma das condições for atendida
  	  END
+
+
+    - # BEGIN TRY E BEGIN CATCH #
+	BEGIN TRY										--> TRY é um bloco de código usado para envolver uma parte de código que possivelmente pode
+		Bloco de código que pode gerar erros						gerar um erro, se ocorrer o erro dentro do try ele será transferido para o catch
+		(Instruções SQL, procedimentos armazenados, etc.)				--> é um bloco de código para lidar com exceções(erros), se ocorrer um erro dentro do bloco TRY
+	END TRY											vai ser transferido para o CATCH, onde a mensagem de errro será exibido
+	BEGIN CATCH
+		Bloco de código para tratamento de erros
+		(Log de erro, rollback de transações, etc.)
+	END CATCH
 
 -------------------------------------------------------------------------
 
