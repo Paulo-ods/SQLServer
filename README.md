@@ -254,6 +254,13 @@ SELECT:
      	-> Substitui o campo que quer e que ja existe na tabela por outro que queira substituir
       	-> Supondo REPLACE(Nome, ' ', '%'); Tira todos os espaços em brancos na coluna Nome e substitui por %
 
+
+    - # CASE #
+    	 CASE											--> Função usada para avaliar uma lista de condições e retornar uma das opções											
+     	WHEN quando acontecer essa condição THEN entao sai esse resultado [ ...n ]		--> você pode ter quantos WHEN quiser e pode opcionalmente incluir uma cláusula ELSE 
+   	 [ ELSE senao sai esse resultado ]							para especificar um valor padrão a ser retornado se nenhuma das condições for atendida
+ 	  END
+
 -------------------------------------------------------------------------
 
 curso
