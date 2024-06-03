@@ -225,7 +225,7 @@ SELECT:
 -------------------------------------------------------------------------
 
 
-# | ISNULL | VIEW | HTTP | REPLACE| CASE | #
+# | ISNULL | VIEW | HTTP | REPLACE| CASE | CHARINDEX |#
 
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
 	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
@@ -271,6 +271,11 @@ SELECT:
 		Bloco de código para tratamento de erros
 		(Log de erro, rollback de transações, etc.)
 	END CATCH
+
+
+    - # CHARINDEX #
+    	CHARINDEX('-', @condicaoPagamentoId) +1							--> Encontra a posição do caractere '-' na string condicaoPagamentoId
+     												+1 ajusta para começar logo após o caractere '-'
 
 -------------------------------------------------------------------------
 
