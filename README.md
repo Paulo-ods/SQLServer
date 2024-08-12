@@ -277,6 +277,15 @@ SELECT:
     	CHARINDEX('-', @condicaoPagamentoId) +1							--> Encontra a posição do caractere '-' na string condicaoPagamentoId
      												+1 ajusta para começar logo após o caractere '-'
 
+
+   - # ROW NUMBER #
+	SELECT 											--> É usado para atribuir um número sequencial para cada linha de uma determinada coluna
+	    ROW_NUMBER() OVER (ORDER BY coluna1, coluna2, ...) AS row_num,			geralmente usada para criar uma ordem de tal coluna ou criar um Id em uma procedure
+	    coluna1, 
+	    coluna2, 
+	    ...
+	FROM 
+
 -------------------------------------------------------------------------
 
 curso
