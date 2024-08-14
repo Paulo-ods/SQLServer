@@ -225,7 +225,7 @@ SELECT:
 -------------------------------------------------------------------------
 
 
-# | ISNULL | VIEW | HTTP | REPLACE| CASE | CHARINDEX |#
+# | ISNULL | VIEW | HTTP | REPLACE| CASE | CHARINDEX | ROW NUMBER |#
 
     - # SELECT ISNULL(nome, 'Nome não especificado') AS Nome		 -> se o valor da coluna nome for nulo, a função ISNULL irá retornar 'Nome n especificado',
 	FROM Tabela #				 			 caso contrario ira retornar o valor da coluna 'nome' 
